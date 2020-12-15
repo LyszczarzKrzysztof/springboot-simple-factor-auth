@@ -1,4 +1,4 @@
-package com.example.springbootsimplefactorauth;
+package com.example.springbootsimplefactorauth.model;
 
 
 import org.springframework.security.core.GrantedAuthority;
@@ -22,6 +22,7 @@ public class AppUser implements UserDetails {
     private String username;
     private String password;
     private String role;
+    private boolean isEnabled;
 
     public AppUser() {
     }
@@ -80,7 +81,11 @@ public class AppUser implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return isEnabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        isEnabled = enabled;
     }
 
     @Override
@@ -92,4 +97,5 @@ public class AppUser implements UserDetails {
                 ", role='" + role + '\'' +
                 '}';
     }
+
 }

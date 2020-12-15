@@ -1,5 +1,6 @@
-package com.example.springbootsimplefactorauth;
+package com.example.springbootsimplefactorauth.repo;
 
+import com.example.springbootsimplefactorauth.model.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
